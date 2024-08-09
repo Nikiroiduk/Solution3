@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+
 
 namespace Solution3BL
 {
@@ -36,7 +38,7 @@ namespace Solution3BL
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"Error processing user {item.User.FirstName} {item.User.LastName}: {ex.Message}");
+                    throw new Exception($"Error processing user {item.User.FirstName} {item.User.LastName}: {ex.Message}");
                 }
             }
         }
